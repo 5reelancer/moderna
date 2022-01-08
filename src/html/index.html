@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello world</title>
+
+</head>
+
+<body>
+  @@include("chunk/header.html")
+
+  <picture>
+    <source srcset="img/boots.webp" , type="image/webp">
+  </picture>
+
+  <h1>Главная Hello world !!! </h1>
+
+  @@loop("chunk/news-item.html", "../../data/news.json")
+
+  @@include("chunk/footer.html")
+</body>
+
+</html>

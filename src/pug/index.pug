@@ -1,0 +1,14 @@
+extends layout/app
+
+block page 
+  include chunk/header
+
+  h1.title Главная
+  img(src="img/walp.jpg", alt="Фотография волны", width="600")
+
+  ul.news
+    each item in news
+      li= item.name
+  h2.hello-world Привет мир!!!
+
+  include chunk/footer
