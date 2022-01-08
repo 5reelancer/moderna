@@ -2,15 +2,15 @@ const { watch, series, parallel } = require("gulp");
 const browserSync = require("browser-sync").create();
 
 // Конфигурация
-const path = require("./config/path.js");
+const path = require("./gulpfull/config/path.js");
 
 // Задачи
-const clear = require('./task/clear.js');
-const pug = require('./task/pug.js');
-const scss = require('./task/scss.js');
-const js = require('./task/js.js');
-const img = require('./task/img.js');
-const font = require('./task/font.js');
+const clear = require('./gulpfull/task/clear.js');
+const pug = require('./gulpfull/task/pug.js');
+const scss = require('./gulpfull/task/scss.js');
+const js = require('./gulpfull/task/js.js');
+const img = require('./gulpfull/task/img.js');
+const font = require('./gulpfull/task/font.js');
 
 // Сервер
 const server = () => {
