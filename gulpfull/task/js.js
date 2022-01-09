@@ -26,6 +26,7 @@ const js = () => {
     .pipe(autoprefixer())
     .pipe(dest(path.js.dest, { sourcemaps: true }))
     .pipe(rename({ suffix: ".min" }))
+    .pipe(dest(path.js.dest, { sourcemaps: true }))
     .pipe(babel())
     .pipe(webpack(app.webpack))
     .pipe(dest(path.js.dest, { sourcemaps: true }));
