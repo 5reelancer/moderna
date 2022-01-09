@@ -17,7 +17,7 @@ const webpCss = require("gulp-webp-css");
 
 // Обработка в SCSS
 const scss = () => {
-  return src(path.scss.src, { sourcemaps: app.isDev })
+  return src(path.scss.src, { sourcemaps: true })
     .pipe(plumber({
       errorHandler: notify.onError(error => ({
         title: "SCSS",
@@ -29,11 +29,11 @@ const scss = () => {
     .pipe(autoprefixer())
     .pipe(cssMediaQueries())
     .pipe(size({ title: "До сжатия main.scss:" }))
-    .pipe(dest(path.scss.dest, { sourcemaps: app.isDev }))
+    .pipe(dest(path.scss.dest, { sourcemaps: true }))
     .pipe(rename({ suffix: ".min" }))
     .pipe(csso())
     .pipe(size({ title: "После сжатия main.min.css:" }))
-    .pipe(dest(path.scss.dest, { sourcemaps: app.isDev }));
+    .pipe(dest(path.scss.dest, { sourcemaps: true }));
 }
 
 module.exports = scss;

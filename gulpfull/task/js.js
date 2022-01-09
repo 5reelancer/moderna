@@ -8,11 +8,12 @@ const app = require("../config/app.js");
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
 const babel = require("gulp-babel");
+const rename = require("gulp-rename");
 const webpack = require("webpack-stream");
 
 // Обработка JS
 const js = () => {
-  return src(path.js.src, { sourcemaps: app.isDev })
+  return src(path.js.src, { sourcemaps: true })
     .pipe(plumber({
       errorHandler: notify.onError(error => ({
         title: "JS",
@@ -20,8 +21,9 @@ const js = () => {
       }))
     }))
     .pipe(babel())
+    .pipe(rename({ suffix: ".min" }))
     .pipe(webpack(app.webpack))
-    .pipe(dest(path.js.dest, { sourcemaps: app.isDev }));
+    .pipe(dest(path.js.dest, { sourcemaps: true }));
 }
 
 module.exports = js;
