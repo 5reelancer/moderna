@@ -7,8 +7,8 @@ const app = require("../config/app.js");
 // Плагины
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
-const babel = require("gulp-babel");
 const rename = require("gulp-rename");
+const babel = require("gulp-babel");
 const webpack = require("webpack-stream");
 
 // Обработка JS
