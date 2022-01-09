@@ -9,7 +9,6 @@ const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
 const babel = require("gulp-babel");
 const webpack = require("webpack-stream");
-const { isDev } = require("../gulp/config/app.js.js");
 
 // Обработка JS
 const js = () => {

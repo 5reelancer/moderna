@@ -15,7 +15,6 @@ const rename = require("gulp-rename");
 const size = require("gulp-size");
 const cssMediaQueries = require("gulp-group-css-media-queries");
 const webpCss = require("gulp-webp-css");
-const { isDev } = require("../config/app.js");
 
 // Обработка в CSS
 const css = () => {
