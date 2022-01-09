@@ -20,8 +20,8 @@ const js = () => {
         message: error.message
       }))
     }))
-    .pipe(babel())
     .pipe(rename({ suffix: ".min" }))
+    .pipe(babel())
     .pipe(webpack(app.webpack))
     .pipe(dest(path.js.dest, { sourcemaps: true }));
 }
