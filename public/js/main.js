@@ -7,8 +7,37 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (function() { // webpackBootstrap
-/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/js/libs.js":
+/*!************************!*\
+  !*** ./src/js/libs.js ***!
+  \************************/
+/***/ (function() {
+
+eval("\n\n//# sourceURL=webpack://moderno-marketplace/./src/js/libs.js?");
+
+/***/ }),
+
+/***/ "./src/js/main.js":
+/*!************************!*\
+  !*** ./src/js/main.js ***!
+  \************************/
+/***/ (function() {
+
+eval("a = 10;\r\nb = 10;\r\nc = (a + b);\r\nconsole.log(c)\r\n\n\n//# sourceURL=webpack://moderno-marketplace/./src/js/main.js?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
 /******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	__webpack_modules__["./src/js/libs.js"]();
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./src/js/main.js"]();
 /******/ 	
 /******/ })()
 ;

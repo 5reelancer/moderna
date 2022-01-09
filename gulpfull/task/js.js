@@ -7,6 +7,9 @@ const app = require("../config/app.js");
 // Плагины
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
+const concat = require("gulp-concat");
+const autoprefixer = require("gulp-autoprefixer");
+const rename = require("gulp-rename");
 const babel = require("gulp-babel");
 const webpack = require("webpack-stream");
 
@@ -19,6 +22,10 @@ const js = () => {
         message: error.message
       }))
     }))
+    .pipe(concat("main.js"))
+    .pipe(autoprefixer())
+    .pipe(dest(path.js.dest, { sourcemaps: true }))
+    .pipe(rename({ suffix: ".min" }))
     .pipe(babel())
     .pipe(webpack(app.webpack))
     .pipe(dest(path.js.dest, { sourcemaps: true }));
