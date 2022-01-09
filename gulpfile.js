@@ -42,5 +42,5 @@ exports.font = font;
 exports.dev = series(
   clear,
   parallel(html, scss, js, img, font),
-  parallel(watcher, server),
+  parallel(watcher, server, watcher),
 );

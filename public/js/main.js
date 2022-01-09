@@ -1,1 +1,0 @@
-!function(){var __webpack_modules__={"./src/js/libs.js":function(){eval("\n\n//# sourceURL=webpack://moderno-marketplace/./src/js/libs.js?")},"./src/js/main.js":function(){eval("\n\n//# sourceURL=webpack://moderno-marketplace/./src/js/main.js?")}};__webpack_modules__["./src/js/libs.js"]();var __webpack_exports__={};__webpack_modules__["./src/js/main.js"]()}();
