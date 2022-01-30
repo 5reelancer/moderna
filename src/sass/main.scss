@@ -1,23 +1,22 @@
-$base-fon-size: 22px;
 
-@mixin ph {
-  @media (max-width: 700px) {
-    @content;
-  }
-}
-
-* {
+*, 
+*::before,
+*::after{
+  padding: 0;
+  margin: 0;
+  border: 0;
   box-sizing: border-box;
 }
-body{
-  background: #f00;
-  font-size: $base-fon-size;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
-  @include ph {
-    color: #fff;
-  }
+a{
+  text-decoration: none;
 }
-@import "block/title.scss";
-@import "block/header.scss";
+ul,
+ol, 
+li{
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
 @import "block/footer.scss";
